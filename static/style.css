@@ -4,8 +4,7 @@
 	font-style: normal;
 	font-display: swap; /* Read next point */
 	unicode-range: U+000-5FF; /* Download only latin glyphs */
-	src: local('MonoLisa'), url('./MonoLisa-Regular.woff2') format('woff2'),
-		url('./MonoLisa-Regular.woff') format('woff');
+	src: url('/MonoLisa-Regular.woff2') format('woff2'), url('/MonoLisa-Regular.woff') format('woff');
 }
 :root {
 	/* Define Colors as Colors */

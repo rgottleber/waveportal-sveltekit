@@ -4,11 +4,23 @@
 	import Wave from '../components/wave.svelte';
 	$: account = null;
 	onMount(async () => {
-		const provider = new ethers.providers.Web3Provider(window.ethereum);
-		const signer = provider.getSigner();
 		try {
-			account = await signer.getAddress();
-		} catch (error) {}
+			const { ethereum } = window;
+			if (!ethereum) {
+				alert('Get MetaMask!');
+				return;
+			}
+			const provider = new ethers.providers.Web3Provider(window.ethereum);
+			const accounts = await ethereum.request({ method: 'eth_accounts' });
+			if (accounts.length !== 0) {
+				account = accounts[0];
+				console.log('Found an authorized account:', account);
+			} else {
+				console.log('No authorized account found');
+			}
+		} catch (error) {
+			console.log(error);
+		}
 	});
 	async function attachWallet() {
 		const provider = new ethers.providers.Web3Provider(window.ethereum, 'any');

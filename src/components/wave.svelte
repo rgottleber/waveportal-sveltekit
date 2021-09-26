@@ -55,17 +55,20 @@
 	getWaves();
 </script>
 
-<p>👋 Hello, I'm a 🤖 created by @waveportal.</p>
-<p>{waveCount} 🧔s have waved</p>
+<p>👋 Hello, I'm a 🤖 created by Richard.</p>
+<p>{waveCount} 👤s have waved</p>
 
 {#if !mining}
 	<p><button on:click={wave}>👋 at me please!</button></p>
 {:else}
-	<p>🤖 is currently mining... ⛏️⛏️⛏️</p>
+	<p>🤖 is currently mining... <span>⛏️⛏️⛏️</span></p>
 {/if}
 
 <style>
 	p {
 		text-align: center;
+	}
+	span {
+		background-color: darkgoldenrod;
 	}
 </style>

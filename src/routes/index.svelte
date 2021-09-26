@@ -1,2 +1,13 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import { onMount } from 'svelte';
+	import { ethers } from 'ethers';
+	onMount(async () => {
+		const provider = new ethers.providers.Web3Provider(window.ethereum);
+	});
+	async function attachWallet() {
+		await window.ethereum.enable();
+	}
+</script>
+
+<h1>Howdy</h1>
+<button on:click={attachWallet}>Attach Wallet</button>

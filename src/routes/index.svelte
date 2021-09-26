@@ -32,7 +32,6 @@
 </script>
 
 <h1>Howdy 👋</h1>
-<h4>I'm Richard, this is a fun little place to wave at me on the blockchain</h4>
 
 {#if !account}
 	<p>
@@ -43,8 +42,7 @@
 {/if}
 
 <style>
-	h1,
-	h4 {
+	h1 {
 		text-align: center;
 	}
 	p {

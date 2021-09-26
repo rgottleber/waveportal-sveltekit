@@ -15,11 +15,11 @@
   --purple: #994ff3;
   --yellow: #fbdd74;
   /* Dark Theme */
-	/* --lightGrey: #f2eef5;
-  --lightBlack: #16161a;
-  --lightPurple: #7f5af0;
-  --darkGrey: #94a1b2;
-  --darkTeal: #2cb67d;  */
+	--lightGrey: #f2eef5;
+	--lightBlack: #16161a;
+	--lightPurple: #7f5af0;
+	--darkGrey: #94a1b2;
+	--darkTeal: #2cb67d;
 
 	--white: #fffffe;
 	--black: #131428;
@@ -52,7 +52,7 @@
 	--level-10: 0 3px 15px -3px rgba(66, 198, 255, 0.5), 0 0px 6px -2px rgba(66, 198, 255, 0.25);
 	/* Positioning */
 	--containerPadding: 2.5%;
-	--headerHeight: 5rem;
+	--headerHeight: 0rem;
 	--borderRadius: 10px;
 }
 /* From TypeScale */

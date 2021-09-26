@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { ethers } from 'ethers';
+	import Wave from '../components/wave.svelte';
 	$: account = null;
 	onMount(async () => {
 		const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -22,13 +23,18 @@
 <p>I'm Richard, this is a fun little place to wave at me on the blockchain</p>
 
 {#if !account}
-	<button on:click={attachWallet}>Attach Wallet</button>
+	<p>
+		<button on:click={attachWallet}>Attach Wallet</button>
+	</p>
 {:else}
-	<p>You're connected to the wallet!</p>
+	<Wave />
 {/if}
 
 <style>
 	h1 {
+		text-align: center;
+	}
+	p {
 		text-align: center;
 	}
 </style>
